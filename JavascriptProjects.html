@@ -1,0 +1,354 @@
+<html lang="en">
+<head>
+	<title>Javascript Projects</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+	<style>
+		body {
+ 			background-color: #767070;
+		}
+		header {
+  			align-items: stretch;
+  			color: white;
+  			justify-content: center;
+  			text-align: center;
+  			font-family: "Mate SC", serif;
+		}
+		header div {
+  			align-items: center;
+  			justify-content: space-around;
+		}
+		section {
+  			background-color: white;
+  			padding-top: 2vw;
+  			padding-left: 2vw;
+  			padding-right: 2vw;
+  			border: 0.5vw solid #000;
+		}
+		.fa-js {
+  			color: yellow;
+		}
+		nav {
+  			display: flex;
+  			justify-content: space-between;
+  			align-items: center;
+		}
+		h2 {
+  			font-family: "Playfair Display", serif;
+  			background-color: #827766;
+  			display: flex;
+  			height: 10vw;
+  			line-height: 10vw;
+  			padding-left: 3vw;
+  			border-bottom: 0.5vw double #000;
+		}
+		article {
+  			height: auto;
+  			background-color: #b5aa9a;
+  			border: 0.5vw double #000;
+		}
+		article p {
+  			padding-left: 3vw;
+		}
+		form {
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			grid-template-rows: 1fr 1fr 1fr;
+  			grid-template-areas: "input ans" "input ans" "submit ans";
+  			width: 60%;
+  			height: 40%;
+  			margin-left: auto;
+  			margin-right: auto;
+  			border: 1vw double #000;
+  			background-color: rgb(165, 240, 240);
+		}
+		.true {
+  			background-color: #63a34b;
+  			color: white;
+  			display: inline-block;
+  			width: 10vw;
+  			height: 5vh;
+		}
+		input {
+  			width: 100%;
+  			height: 100%;
+  			font-family: "Sigmar One", cursive;
+  			text-align: center;
+  			grid-area: input;
+		}
+		input:focus {
+  			background-color: rgb(235, 229, 229);
+		}
+		button {
+  			grid-area: submit;
+		}
+		.answer {
+  			grid-area: ans;
+  			text-align: center;
+  			margin-top: auto;
+  			margin-bottom: auto;
+		}
+	</style>
+</head>
+<body class="container-fluid">
+	<header class="row">
+		<div class="col-3 row">
+		<i class="fab fa-js fa-3x col-2"></i>
+		<h1 class="col-10">Javascript Projects</h1>
+		</div>
+		<nav class="col-9">
+			<a href="#Palindrome" class="btn btn-light">Palindrome Checker</a>
+			<a href="#Roman" class="btn btn-light">Roman Numeral Converter</a>
+			<a href="#Caesars" class="btn btn-light">Caesars Cipher</a>
+			<a href="#Telephone" class="btn btn-light">Telephone Number Validator</a>
+			<a href="" class="btn btn-light">Cash Register</a>
+		</nav>
+	</header>
+	<section>
+		<article id="Palindrome">
+			<h2>Palindrome Checker</h2>
+			<p>A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
+			<form id="palindromeForm">
+				<input type="text" placeholder="Palindrome to check" id="PalindromeInput">
+				<span id="PalindromeAns" class="answer">The answer will be displayed here </span>
+				<button class="btn btn-primary" type="button" id="PalindromeSend"><i class="fas fa-paper-plane"></i> Submit</button>
+			</form>
+		</article>
+		<article id="Roman">
+			<h2>Roman Numeral Converter</h2>
+			<p>Convert the given number into a roman numeral.</p>
+			<form>
+				<input type="text" name="" placeholder="Number to convert" id="RomanInput">
+				<span id="RomanAns" class="answer">The answer will be displayed here </span>
+				<button type="button" class="btn btn-primary" id="RomanSend" ><i class="fas fa-paper-plane"></i> Submit</button>
+			</form>			
+		</article>
+		<article id="Caesars">
+			<h2>Caesars Cipher</h2>
+			<p>One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount. A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.</p>
+			<form>
+				<input type="text" name="" placeholder="Text to transform" id="CaesarsInput">
+				<span id="CaesarsAns" class="answer">The answer will be displayed here </span>
+				<button type="button" class="btn btn-primary" id="CaesarsSend"> <i class="fas fa-paper-plane"></i> Submit</button>
+			</form>			
+		</article>
+		<article id="Telephone">
+			<h2>Telephone Number Validator</h2>
+			<p>The user may fill out the form field any way they choose as long as it has the format of a valid US number. The following are examples of valid formats for US numbers
+				555-555-5555 <br>
+ 				(555)555-5555 <br>
+ 				(555) 555-5555 <br>
+				555 555 5555 <br>
+				5555555555 <br>
+				1 555 555 5555 <br>
+			</p>
+			<form>
+				<input type="text" name="" placeholder="Telephone to validate" id="TelephoneInput">
+				<span id="TelephoneAns" class="answer">The answer will be displayed here </span>
+				<button type="button" class="btn btn-primary" id="TelephoneSend"><i class="fas fa-paper-plane"></i> Submit</button>
+			</form>		
+		</article>
+		<article>
+			<h2>Cash register</h2>
+			<p>Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price),
+			payment as the second argument (cash), and cash-in-drawer (cid) as the third argument. <br/>
+			
+			cid is a 2D array listing available currency.
+			</p>
+			<form>
+				<input type="text" name="" placeholder="Telephone to validate" id="TelephoneInput">
+				<span id="TelephoneAns" class="answer">The answer will be displayed here </span>
+				<button type="button" class="btn btn-primary" id="TelephoneSend"><i class="fas fa-paper-plane"></i> Submit</button>
+			</form>
+		</article>
+	</section>
+	<script type="text/javascript">
+		function palindrome() {
+			let str = document.getElementById("PalindromeInput").value;
+			str = str.replace(/[^0-9a-z]/gi, "").toLowerCase()
+			let invStr = ""
+			for (let i = str.length - 1; i >= 0; i--) {
+				invStr += str[i]
+			}
+			let ans = document.getElementById("PalindromeAns");
+			if (invStr == str) {
+				ans.style.backgroundColor = "green";
+				ans.innerText = "It is a Palindrome"
+			}
+			else {
+				ans.style.backgroundColor = "red";
+				ans.innerText = "It isn´t a Palindrome"
+			}
+		}
+
+		function convertToRoman() {
+			let num = document.getElementById("RomanInput").value;
+			let convArr = [["I", "V"], ["X", "L"], ["C", "D"], ["M"]];
+			num = num.toString().split("").map(str => Number(str));
+			let convIndex = num.length - 1;
+			let ansArr = "";
+			for (let elem of num) {
+				if (elem < 5) {
+					if (elem == 4) {
+						ansArr += convArr[convIndex][0] + convArr[convIndex][1];
+					}
+					else {
+						for (let i = 1; i <= elem; i++) {
+							ansArr += convArr[convIndex][0];
+						}
+					}
+				}
+				else {
+					if (elem == 9) {
+						ansArr += convArr[convIndex][0] + convArr[convIndex + 1][0];
+					}
+					else {
+						ansArr += convArr[convIndex][1];
+						elem -= 5;
+						for (let i = 1; i <= elem; i++) {
+							ansArr += convArr[convIndex][0];
+						}
+					}
+				}
+				convIndex -= 1;
+			}
+			document.getElementById("RomanAns").innerText = ansArr;
+		}
+
+
+		function rot() {
+			let str = document.getElementById("CaesarsInput").value;
+			let ans = ""
+			let convArr = Array.from(Array(26).keys()).map(elem => elem + 65).map(elem => String.fromCharCode(elem))
+			for (let elem of str) {
+				let idx = convArr.indexOf(elem);
+				if (idx == -1) {
+					ans += elem;
+				}
+				else {
+					if (idx >= 13) {
+						ans += convArr[idx - 13]
+					}
+					else {
+						ans += convArr[26 - (13 - idx)]
+					}
+				}
+			}
+			document.getElementById("CaesarsAns").innerText = ans;
+		}
+
+		function telephoneCheck() {
+			let ans = false
+			let str = document.getElementById("TelephoneInput").value;
+			if (/^[0-9|\-|\s|\(|\)]+$/.test(str)) {
+				if (str.length >= 10) {
+					if (str.match(/\d/g).length == 11 && str[0] != 1) {
+						return (false);
+					}
+					if (str.match(/\d/g).length > 11) {
+						return (false);
+					}
+					if (/\-/.test(str) && str.match(/\-/g).length > 2) {
+						return (false);
+					}
+					if (/[\(\)]/.test(str)) {
+						if (str.match(/[\(\)]/g).length != 2) {
+							return (false);
+						}
+						if (str[str.indexOf("(") + 4] != ")") {
+							return (false);
+						}
+					}
+					return (true);
+				}
+			}
+			return (false);
+		}
+
+
+		function isEnoughMoney(change, cid) {
+			let moneyAvailable = 0;
+			for (let idx in cid) {
+				moneyAvailable += cid[idx][1];
+			}
+			if (moneyAvailable < change) {
+				return false;
+			}
+			return true;
+		}
+		function checkCashRegister(price, cash, cid) {
+			let change = (cash - price) * 100;
+			if (change == 0) {
+				return { status: "CLOSED", change: cid }
+			}
+			for (idx in cid) {
+				cid[idx][1] *= 100;
+			}
+
+			if (!isEnoughMoney(change, cid)) {
+				return { status: "INSUFFICIENT_FUNDS", change: [] }
+			}
+			let moneyAvailable = 0;
+			for (let idx in cid) {
+				moneyAvailable += cid[idx][1];
+			}
+			if (moneyAvailable == change) {
+				return { status: "CLOSED", change: cid.map(elem => [elem[0], elem[1] / 100]) }
+			}
+			let values = [
+				["PENNY", 1],
+				["NICKEL", 5],
+				["DIME", 10],
+				["QUARTER", 25],
+				["ONE", 100],
+				["FIVE", 500],
+				["TEN", 1000],
+				["TWENTY", 2000],
+				["ONE HUNDRED", 10000]
+			]
+			let ans = [
+				["PENNY", 0],
+				["NICKEL", 0],
+				["DIME", 0],
+				["QUARTER", 0],
+				["ONE", 0],
+				["FIVE", 0],
+				["TEN", 0],
+				["TWENTY", 0],
+				["ONE HUNDRED", 0]
+			]
+
+			let idx = 8
+			while (idx >= 0) {
+				if (values[idx][1] <= change && cid[idx][1] > 0) {
+					ans[idx][1] += values[idx][1]
+					cid[idx][1] -= values[idx][1]
+					change -= values[idx][1]
+				}
+				else {
+					idx -= 1
+				}
+			}
+			if (change != 0) {
+				return { status: "INSUFFICIENT_FUNDS", change: [] }
+			}
+			else {
+				ans = ans.filter(elem => elem[1] != 0);
+				ans = ans.map(elem => [elem[0], elem[1] / 100])
+				return { status: "OPEN", change: ans.reverse() }
+			}
+		}
+
+		document.getElementById("PalindromeSend").addEventListener("click", palindrome, true);
+		document.getElementById("RomanSend").addEventListener("click", convertToRoman, true);
+		document.getElementById("CaesarsSend").addEventListener("click", rot, true)
+		document.getElementById("TelephoneSend").addEventListener("click", func = () => document.getElementById("TelephoneAns").innerText = telephoneCheck(), true)
+	</script>
+</body>
+</html>
